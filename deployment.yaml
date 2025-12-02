@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: my-final-app
+  name: my-final-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-final-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: my-final-app
+    spec:
+      containers:
+      - image: my-ci-app:minikube-v1
+        name: my-ci-app
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
