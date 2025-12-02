@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docker Test</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        h1 { font-size: 3em; }
+        .success { color: #4CAF50; }
+    </style>
+</head>
+<body>
+    <h1>🎉 Docker работает!</h1>
+    <p class="success">✅ Контейнер успешно запущен</p>
+    <p>Теперь у вас есть Docker образ my-ci-app:v1.0</p>
+    <p>Запущено: <span id="datetime"></span></p>
+    <script>
+        document.getElementById('datetime').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
